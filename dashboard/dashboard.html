@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard</title>
+    <link rel="stylesheet" href="/dashboard/custom/style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h1>LuxeCart Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active" data-section="overview"><i class="fas fa-chart-line"></i> Overview</a></li>
+                    <li><a href="#" data-section="products"><i class="fas fa-box"></i> Products</a></li>
+                    <li><a href="#" data-section="orders"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="#" data-section="customers"><i class="fas fa-users"></i> Customers</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h2 id="section-title">Dashboard Overview</h2>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </header>
+            <section id="overview" class="dashboard-section active">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Total Sales</h3>
+                        <p class="metric-value">$<span id="total-sales">0</span></p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Orders</h3>
+                        <p class="metric-value"><span id="total-orders">0</span></p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Customers</h3>
+                        <p class="metric-value"><span id="total-customers">0</span></p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Products</h3>
+                        <p class="metric-value"><span id="total-products">0</span></p>
+                    </div>
+                </div>
+            </section>
+            <section id="products" class="dashboard-section">
+                <button id="add-product">Add New Product</button>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- Product rows will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+            <section id="orders" class="dashboard-section">
+                <h3>Recent Orders</h3>
+                <table id="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-list">
+                        <!-- Order rows will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+            <section id="customers" class="dashboard-section">
+                <h3>Customer List</h3>
+                <table id="customer-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Total Orders</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-list">
+                        <!-- Customer rows will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="/dashboard/custom/app.js"></script>
+</body>
+</html>
